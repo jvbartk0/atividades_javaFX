@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.GridPane?>
+
+<VBox alignment="TOP_CENTER" spacing="20.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.cadastroanalisedepessoas.HelloController">
+    <padding><Insets bottom="20.0" left="20.0" right="20.0" top="20.0"/></padding>
+
+    <Label text="Cadastro de Pessoa" style="-fx-font-size: 20; -fx-font-weight: bold;"/>
+
+    <GridPane hgap="10" vgap="15">
+        <Label text="Nome:" GridPane.columnIndex="0" GridPane.rowIndex="0"/>
+        <TextField fx:id="nomeField" promptText="Digite seu nome" GridPane.columnIndex="1" GridPane.rowIndex="0" style="-fx-pref-width: 200;"/>
+
+        <Label text="Idade:" GridPane.columnIndex="0" GridPane.rowIndex="1"/>
+        <TextField fx:id="idadeField" promptText="Digite sua idade" GridPane.columnIndex="1" GridPane.rowIndex="1" style="-fx-pref-width: 200;"/>
+
+        <Label text="Sexo:" GridPane.columnIndex="0" GridPane.rowIndex="2"/>
+        <HBox spacing="10" GridPane.columnIndex="1" GridPane.rowIndex="2">
+            <RadioButton fx:id="masculinoRadio" text="Masculino"/>
+            <RadioButton fx:id="femininoRadio" text="Feminino"/>
+        </HBox>
+
+        <Label text="Esportes:" GridPane.columnIndex="0" GridPane.rowIndex="3"/>
+        <CheckBox fx:id="esportesCheck" text="Gosta de praticar esportes" GridPane.columnIndex="1" GridPane.rowIndex="3"/>
+    </GridPane>
+
+    <Button fx:id="analisarButton" text="Analisar" style="-fx-font-size: 14; -fx-pref-width: 100;"/>
+
+    <Label fx:id="resultadoLabel" text="Resultado aparecerá aqui"
+           style="-fx-font-size: 14; -fx-font-weight: bold; -fx-text-fill: blue; -fx-wrap-text: true; -fx-pref-width: 300;"/>
+</VBox>
