@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.GridPane?>
+
+<VBox alignment="TOP_CENTER" spacing="20.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.cadastroalunos.HelloController">
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+    </padding>
+
+    <Label text="Cadastro de Alunos" style="-fx-font-size: 20; -fx-font-weight: bold;"/>
+
+    <!-- Formulário de cadastro -->
+    <GridPane hgap="10" vgap="15">
+        <Label text="Nome:" GridPane.columnIndex="0" GridPane.rowIndex="0"/>
+        <TextField fx:id="nomeField" promptText="Digite o nome" GridPane.columnIndex="1" GridPane.rowIndex="0" style="-fx-pref-width: 200;"/>
+
+        <Label text="Idade:" GridPane.columnIndex="0" GridPane.rowIndex="1"/>
+        <TextField fx:id="idadeField" promptText="Digite a idade" GridPane.columnIndex="1" GridPane.rowIndex="1" style="-fx-pref-width: 200;"/>
+
+        <Label text="Curso:" GridPane.columnIndex="0" GridPane.rowIndex="2"/>
+        <ComboBox fx:id="cursoComboBox" promptText="Selecione o curso" GridPane.columnIndex="1" GridPane.rowIndex="2" style="-fx-pref-width: 200;"/>
+    </GridPane>
+
+    <!-- Botões -->
+    <HBox spacing="15" alignment="CENTER">
+        <Button fx:id="adicionarButton" text="Adicionar" style="-fx-font-size: 14; -fx-pref-width: 100;"/>
+        <Button fx:id="excluirButton" text="Excluir" style="-fx-font-size: 14; -fx-pref-width: 100;"/>
+    </HBox>
+
+    <!-- Tabela de alunos -->
+    <Label text="Alunos Cadastrados:" style="-fx-font-size: 14; -fx-font-weight: bold;"/>
+    <TableView fx:id="tabelaAlunos" style="-fx-pref-width: 500; -fx-pref-height: 200;">
+        <columns>
+            <TableColumn fx:id="colunaNome" text="Nome" prefWidth="150"/>
+            <TableColumn fx:id="colunaIdade" text="Idade" prefWidth="100"/>
+            <TableColumn fx:id="colunaCurso" text="Curso" prefWidth="250"/>
+        </columns>
+    </TableView>
+</VBox>
