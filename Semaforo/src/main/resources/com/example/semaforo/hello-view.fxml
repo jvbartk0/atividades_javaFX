@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.paint.Color?>
+
+<VBox alignment="CENTER" spacing="20.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.semaforo.HelloController">
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+    </padding>
+
+    <Label text="Simulador de Semáforo" style="-fx-font-size: 20; -fx-font-weight: bold;"/>
+
+    <!-- Semáforo -->
+    <VBox alignment="CENTER" spacing="15" style="-fx-border-color: black; -fx-border-width: 3; -fx-border-radius: 10; -fx-padding: 20; -fx-background-color: #333;">
+        <!-- Luz Vermelha -->
+        <Circle fx:id="luzVermelha" radius="40" fill="#320000" stroke="black" strokeWidth="2"/>
+
+        <!-- Luz Amarela -->
+        <Circle fx:id="luzAmarela" radius="40" fill="#323200" stroke="black" strokeWidth="2"/>
+
+        <!-- Luz Verde -->
+        <Circle fx:id="luzVerde" radius="40" fill="#003200" stroke="black" strokeWidth="2"/>
+    </VBox>
+
+    <!-- Label do estado atual -->
+    <Label fx:id="estadoLabel" text="Semáforo: PARADO" style="-fx-font-size: 16; -fx-font-weight: bold; -fx-text-fill: blue;"/>
+
+    <!-- Botões de controle -->
+    <VBox alignment="CENTER" spacing="10">
+        <Button fx:id="iniciarButton" text="Iniciar" style="-fx-font-size: 14; -fx-pref-width: 100;"/>
+        <Button fx:id="pararButton" text="Parar" style="-fx-font-size: 14; -fx-pref-width: 100;"/>
+    </VBox>
+</VBox>
