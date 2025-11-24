@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.layout.HBox?>
+
+<VBox alignment="CENTER" spacing="20.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.adivinhacao.HelloController">
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+    </padding>
+
+    <Label text="🎯 Jogo de Adivinhação" style="-fx-font-size: 20; -fx-font-weight: bold;"/>
+
+    <!-- Instruções -->
+    <Label fx:id="instrucaoLabel" text="Digite um número de 1 a 10" style="-fx-font-size: 14;"/>
+
+    <!-- Campo de entrada -->
+    <TextField fx:id="numeroField" promptText="Digite seu palpite (1-10)"
+               style="-fx-font-size: 14; -fx-pref-width: 150; -fx-alignment: center;"/>
+
+    <!-- Botões -->
+    <HBox spacing="15" alignment="CENTER">
+        <Button fx:id="verificarButton" text="Verificar"
+                style="-fx-font-size: 14; -fx-pref-width: 100;"/>
+        <Button fx:id="tentarNovamenteButton" text="Tentar Novamente"
+                style="-fx-font-size: 14; -fx-pref-width: 120;"/>
+    </HBox>
+
+    <!-- Resultado -->
+    <Label fx:id="resultadoLabel" text="Tente adivinhar o número!"
+           style="-fx-font-size: 14; -fx-font-weight: bold; -fx-text-fill: blue; -fx-wrap-text: true; -fx-pref-width: 300;"/>
+</VBox>
