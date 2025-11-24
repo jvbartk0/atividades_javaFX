@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.GridPane?>
+
+<VBox alignment="TOP_CENTER" spacing="20.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.lanchonete.HelloController">
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+    </padding>
+
+    <Label text="Montagem de Lanche" style="-fx-font-size: 20; -fx-font-weight: bold;"/>
+
+    <!-- Formulário do lanche -->
+    <GridPane hgap="10" vgap="15">
+        <!-- Nome do cliente -->
+        <Label text="Nome do Cliente:" GridPane.columnIndex="0" GridPane.rowIndex="0"/>
+        <TextField fx:id="nomeField" promptText="Digite seu nome" GridPane.columnIndex="1" GridPane.rowIndex="0" style="-fx-pref-width: 200;"/>
+
+        <!-- Tipo de pão -->
+        <Label text="Tipo de Pão:" GridPane.columnIndex="0" GridPane.rowIndex="1"/>
+        <ComboBox fx:id="paoComboBox" promptText="Selecione o pão" GridPane.columnIndex="1" GridPane.rowIndex="1" style="-fx-pref-width: 200;"/>
+
+        <!-- Tipo de carne -->
+        <Label text="Tipo de Carne:" GridPane.columnIndex="0" GridPane.rowIndex="2"/>
+        <VBox spacing="5" GridPane.columnIndex="1" GridPane.rowIndex="2">
+            <RadioButton fx:id="bovinaRadio" text="Bovina"/>
+            <RadioButton fx:id="frangoRadio" text="Frango"/>
+            <RadioButton fx:id="sojaRadio" text="Soja"/>
+        </VBox>
+
+        <!-- Adicionais -->
+        <Label text="Adicionais:" GridPane.columnIndex="0" GridPane.rowIndex="3"/>
+        <VBox spacing="5" GridPane.columnIndex="1" GridPane.rowIndex="3">
+            <CheckBox fx:id="queijoCheck" text="Queijo"/>
+            <CheckBox fx:id="baconCheck" text="Bacon"/>
+            <CheckBox fx:id="saladaCheck" text="Salada"/>
+            <CheckBox fx:id="molhoCheck" text="Molho"/>
+        </VBox>
+    </GridPane>
+
+    <!-- Botão gerar pedido -->
+    <Button fx:id="gerarButton" text="Gerar Pedido" style="-fx-font-size: 14; -fx-pref-width: 150;"/>
+
+    <!-- Label para mostrar o resultado -->
+    <Label fx:id="resultadoLabel" text="Pedido aparecerá aqui"
+           style="-fx-font-size: 14; -fx-font-weight: bold; -fx-text-fill: blue; -fx-wrap-text: true; -fx-pref-width: 400;"/>
+</VBox>
